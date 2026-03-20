@@ -1,4 +1,37 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://aitoolprice.com"
+languageCode = "en-us"
+title = "AI Tool Price"
 theme = "PaperMod"
+paginate = 10
+ 
+[params]
+  description = "Track and compare AI tool pricing in one place"
+  author = "AI Tool Price"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  hideFooter = false
+  disableThemeToggle = false
+ 
+[params.homeInfoParams]
+  Title = "AI Tool Price"
+  Content = "Track pricing, compare plans and catch price changes across 100+ AI tools — updated automatically."
+ 
+[[params.socialIcons]]
+  name = "github"
+  url  = "https://github.com/krishnase/AiToolPrice"
+ 
+[menu]
+  [[menu.main]]
+    name       = "Articles"
+    url        = "/articles/"
+    weight     = 1
+  [[menu.main]]
+    name       = "Compare"
+    url        = "/compare/"
+    weight     = 2
+ 
+[markup.goldmark.renderer]
+  unsafe = true
