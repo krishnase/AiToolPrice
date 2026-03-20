@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd site && hugo --minify",
+  "outputDirectory": "site/public",
+  "installCommand": "brew install hugo",
+  "framework": null,
+  "ignoreCommand": "exit 1"
+}

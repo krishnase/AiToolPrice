@@ -1,6 +1,0 @@
-{
-  "buildCommand": "hugo --minify",
-  "outputDirectory": "site/public",
-  "installCommand": "",
-  "framework": null
-}
