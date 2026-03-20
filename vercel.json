@@ -1,7 +1,6 @@
 {
-  "buildCommand": "cd site && hugo --minify",
+  "buildCommand": "hugo --minify",
   "outputDirectory": "site/public",
-  "installCommand": "brew install hugo",
-  "framework": null,
-  "ignoreCommand": "exit 1"
+  "installCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_extended_0.124.1_linux-amd64.tar.gz | tar -xz -C /usr/local/bin hugo",
+  "framework": null
 }
