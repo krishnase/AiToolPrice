@@ -1,0 +1,99 @@
+# .github/workflows/daily.yml
+# Runs the full pipeline automatically every day at 6 AM UTC.
+# Also rebuilds and deploys the site to Vercel automatically.
+#
+# SETUP: Add these secrets in GitHub repo settings → Secrets:
+#   DB_SERVER, DB_NAME, DB_USER, DB_PASSWORD
+#   ANTHROPIC_API_KEY
+#   VERCEL_TOKEN (get from vercel.com/account/tokens)
+#   VERCEL_ORG_ID, VERCEL_PROJECT_ID (from .vercel/project.json)
+
+name: Daily pipeline + deploy
+
+on:
+  schedule:
+    - cron: "0 6 * * *"      # 6 AM UTC every day
+  workflow_dispatch:           # allow manual trigger from GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout code ──────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Python ──────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── 3. Install dependencies ───────────────────────────────
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install \
+            pyodbc \
+            requests \
+            beautifulsoup4 \
+            anthropic \
+            python-dotenv \
+            playwright
+          playwright install --with-deps chromium
+
+      # ── 4. Install ODBC driver for SQL Server ─────────────────
+      - name: Install ODBC Driver 17
+        run: |
+          curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list \
+            | sudo tee /etc/apt/sources.list.d/mssql-release.list
+          sudo apt-get update
+          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+
+      # ── 5. Write .env from secrets ────────────────────────────
+      - name: Create .env file
+        run: |
+          cat > .env << EOF
+          DB_SERVER=${{ secrets.DB_SERVER }}
+          DB_NAME=${{ secrets.DB_NAME }}
+          DB_USER=${{ secrets.DB_USER }}
+          DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_OUTPUT_DIR=./site/content/articles
+          SITE_BASE_URL=https://yourdomain.com
+          LOG_LEVEL=INFO
+          EOF
+
+      # ── 6. Run the pipeline ───────────────────────────────────
+      - name: Run data pipeline + content generator
+        run: python run.py
+
+      # ── 7. Commit generated Markdown articles ─────────────────
+      - name: Commit new articles to repo
+        run: |
+          git config user.name  "Pricing Bot"
+          git config user.email "bot@yourdomain.com"
+          git add site/content/articles/
+          git diff --staged --quiet || git commit -m "auto: daily pricing update $(date +%Y-%m-%d)"
+          git push
+
+      # ── 8. Deploy to Vercel ───────────────────────────────────
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"
+
+      # ── 9. Upload logs as artifact ────────────────────────────
+      - name: Upload pipeline log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-log-${{ github.run_number }}
+          path: pipeline.log
+          retention-days: 14

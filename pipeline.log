@@ -1,0 +1,192 @@
+2026-03-20 10:11:39,424 [INFO] ============================================================
+2026-03-20 10:11:39,424 [INFO] AI PRICING TRACKER — Daily Run — 2026-03-20 10:11
+2026-03-20 10:11:39,424 [INFO] ============================================================
+2026-03-20 10:11:39,424 [INFO] 
+[STEP 1/2] Running data pipeline...
+2026-03-20 10:17:04,277 [INFO] ============================================================
+2026-03-20 10:17:04,277 [INFO] AI PRICING TRACKER — Daily Run — 2026-03-20 10:17
+2026-03-20 10:17:04,277 [INFO] ============================================================
+2026-03-20 10:17:04,277 [INFO] 
+[STEP 1/2] Running data pipeline...
+2026-03-20 10:17:05,818 [INFO] ============================================================
+2026-03-20 10:17:05,818 [INFO] Pipeline started at 2026-03-20T10:17:05.818542
+2026-03-20 10:17:05,818 [INFO] ============================================================
+2026-03-20 10:17:06,280 [INFO] Connected to Supabase
+2026-03-20 10:17:06,430 [INFO] Found 10 active tools to process
+2026-03-20 10:17:06,431 [INFO] 
+Processing: ChatGPT (https://openai.com/chatgpt/pricing)
+2026-03-20 10:17:06,543 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:09,734 [INFO] 
+Processing: Claude (https://www.anthropic.com/pricing)
+2026-03-20 10:17:09,895 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:13,062 [INFO] 
+Processing: Jasper AI (https://www.jasper.ai/pricing)
+2026-03-20 10:17:13,897 [WARNING]   No plans scraped for Jasper AI — skipping
+2026-03-20 10:17:17,008 [INFO] 
+Processing: Copy.ai (https://www.copy.ai/pricing)
+2026-03-20 10:17:17,176 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:20,343 [INFO] 
+Processing: Writesonic (https://writesonic.com/pricing)
+2026-03-20 10:17:20,505 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:23,676 [INFO] 
+Processing: Midjourney (https://www.midjourney.com/account)
+2026-03-20 10:17:23,784 [INFO] Manual scraper — skipping https://www.midjourney.com/account. Update prices manually in DB.
+2026-03-20 10:17:23,784 [WARNING]   No plans scraped for Midjourney — skipping
+2026-03-20 10:17:26,899 [INFO] 
+Processing: GitHub Copilot (https://github.com/features/copilot#pricing)
+2026-03-20 10:17:27,062 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:30,231 [INFO] 
+Processing: Perplexity AI (https://www.perplexity.ai/pro)
+2026-03-20 10:17:30,392 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:33,559 [INFO] 
+Processing: Notion AI (https://www.notion.so/pricing)
+2026-03-20 10:17:33,728 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:36,892 [INFO] 
+Processing: Grammarly (https://www.grammarly.com/plans)
+2026-03-20 10:17:37,053 [ERROR]   Failed: 
+Traceback (most recent call last):
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 283, in run_pipeline
+    new_plans = scraper.scrape(url)
+  File "/Users/krishnasettipalli/AiToolprice/AiToolPrice/pipeline.py", line 192, in scrape
+    raise NotImplementedError
+NotImplementedError
+2026-03-20 10:17:40,216 [INFO] 
+Pipeline complete. Total changes: 0
+2026-03-20 10:17:40,216 [INFO] 
+[STEP 2/2] Running content generator...
+2026-03-20 10:21:49,848 [INFO] ============================================================
+2026-03-20 10:21:49,849 [INFO] AI PRICING TRACKER — Daily Run — 2026-03-20 10:21
+2026-03-20 10:21:49,849 [INFO] ============================================================
+2026-03-20 10:21:49,849 [INFO] 
+[STEP 1/2] Running data pipeline...
+2026-03-20 10:21:50,084 [INFO] ============================================================
+2026-03-20 10:21:50,084 [INFO] Pipeline started at 2026-03-20T10:21:50.084927
+2026-03-20 10:21:50,085 [INFO] ============================================================
+2026-03-20 10:21:50,661 [INFO] Connected to Supabase
+2026-03-20 10:21:50,800 [INFO] Seeding initial pricing data from verified manual data...
+2026-03-20 10:21:51,104 [INFO]   Seeded 4 plans for chatgpt
+2026-03-20 10:21:51,267 [INFO]   Seeded 3 plans for claude
+2026-03-20 10:21:51,429 [INFO]   Seeded 3 plans for jasper
+2026-03-20 10:21:51,592 [INFO]   Seeded 3 plans for copyai
+2026-03-20 10:21:51,755 [INFO]   Seeded 3 plans for writesonic
+2026-03-20 10:21:51,973 [INFO]   Seeded 4 plans for midjourney
+2026-03-20 10:21:52,191 [INFO]   Seeded 4 plans for github-copilot
+2026-03-20 10:21:52,299 [INFO]   Seeded 2 plans for perplexity
+2026-03-20 10:21:52,517 [INFO]   Seeded 4 plans for notion-ai
+2026-03-20 10:21:52,686 [INFO]   Seeded 3 plans for grammarly
+2026-03-20 10:21:52,741 [INFO] Seed complete.
+2026-03-20 10:21:52,849 [INFO] Checking 10 tools for price changes...
+2026-03-20 10:21:52,850 [INFO] 
+Checking: ChatGPT
+2026-03-20 10:21:53,106 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 10:21:56,215 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 10:22:02,338 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 10:22:02,340 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 10:22:05,452 [INFO] 
+Checking: Claude
+2026-03-20 10:22:06,744 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 10:22:09,863 [INFO] 
+Checking: Jasper AI
+2026-03-20 10:22:10,476 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 10:22:13,589 [INFO] 
+Checking: Copy.ai
+2026-03-20 10:22:14,332 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 10:22:17,447 [INFO] 
+Checking: Writesonic
+2026-03-20 10:22:18,084 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 10:22:21,196 [INFO] 
+Checking: Midjourney
+2026-03-20 10:22:21,308 [INFO]   Manual tool — keeping existing DB prices
+2026-03-20 10:22:21,308 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 10:22:24,422 [INFO] 
+Checking: GitHub Copilot
+2026-03-20 10:22:25,316 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 10:22:28,438 [INFO] 
+Checking: Perplexity AI
+2026-03-20 10:22:28,681 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 10:22:31,767 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 10:22:37,876 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 10:22:37,877 [INFO]   No scraped data — keeping existing 2 plans in DB
+2026-03-20 10:22:40,991 [INFO] 
+Checking: Notion AI
+2026-03-20 10:22:41,442 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 10:22:44,580 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 10:22:50,744 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 10:22:50,744 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 10:22:53,857 [INFO] 
+Checking: Grammarly
+2026-03-20 10:22:54,565 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 10:22:57,677 [INFO] 
+Pipeline complete. Total changes: 0
+2026-03-20 10:22:57,681 [INFO] 
+[STEP 2/2] Running content generator...
+2026-03-20 10:22:58,763 [INFO] ============================================================
+2026-03-20 10:22:58,763 [INFO] Content generator started at 2026-03-20T10:22:58.763460
+2026-03-20 10:22:58,763 [INFO] ============================================================
+2026-03-20 10:22:59,328 [INFO] Found 0 unaddressed price changes
+2026-03-20 10:22:59,389 [INFO] Found 5 pending keyword articles
+2026-03-20 10:22:59,389 [INFO]   Generating keyword article: 'best AI writing tools 2026'
+2026-03-20 10:23:30,382 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 10:23:30,501 [INFO]   Wrote: site/content/articles/best-ai-writing-tools-2026-jasper-ai-vs-copyai-vs-writesonic-compared.md
+2026-03-20 10:23:30,715 [INFO]   Generating keyword article: 'AI tools with free tier'
+2026-03-20 10:24:04,247 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 10:24:04,308 [INFO]   Wrote: site/content/articles/best-ai-tools-with-a-free-tier-in-2024-top-5-picks-tested-and-compared.md
+2026-03-20 10:24:04,520 [INFO]   Generating keyword article: 'ChatGPT vs Claude pricing'
+2026-03-20 10:24:27,128 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 10:24:27,188 [INFO]   Wrote: site/content/articles/chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money.md
+2026-03-20 10:24:27,399 [INFO]   Generating keyword article: 'cheapest AI tools for students'
+2026-03-20 10:25:00,185 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 10:25:00,414 [INFO]   Wrote: site/content/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget.md
+2026-03-20 10:25:00,651 [INFO]   Generating keyword article: 'Grammarly premium worth it 2026'
+2026-03-20 10:25:29,403 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 10:25:29,546 [INFO]   Wrote: site/content/articles/is-grammarly-premium-worth-it-in-2026-an-honest-review.md
+2026-03-20 10:25:29,769 [INFO] 
+Done. Articles written: 5
+2026-03-20 10:25:29,770 [INFO] 
+============================================================
+2026-03-20 10:25:29,770 [INFO] Run complete in 219s
+2026-03-20 10:25:29,770 [INFO]   Price changes detected : 0
+2026-03-20 10:25:29,770 [INFO]   Articles generated     : 5
+2026-03-20 10:25:29,771 [INFO] ============================================================
