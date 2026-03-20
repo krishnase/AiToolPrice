@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Articles on My New Hugo Project</title>
+    <link>http://localhost:1313/articles/</link>
+    <description>Recent content in Articles on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best AI Tools With a Free Tier in 2024: Top 5 Picks Tested and Compared</title>
+      <link>http://localhost:1313/articles/best-ai-tools-with-a-free-tier-in-2024-top-5-picks-tested-and-compared/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/best-ai-tools-with-a-free-tier-in-2024-top-5-picks-tested-and-compared/</guid>
+      <description>Compare ChatGPT, Claude, Copy.ai pricing and features. Updated March 2026.</description>
+    </item>
+    <item>
+      <title>Best AI Writing Tools 2026: Jasper AI vs Copy.ai vs Writesonic Compared</title>
+      <link>http://localhost:1313/articles/best-ai-writing-tools-2026-jasper-ai-vs-copyai-vs-writesonic-compared/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/best-ai-writing-tools-2026-jasper-ai-vs-copyai-vs-writesonic-compared/</guid>
+      <description>Compare Jasper AI, Copy.ai, Writesonic pricing and features. Updated March 2026.</description>
+    </item>
+    <item>
+      <title>ChatGPT vs Claude Pricing: Which AI Assistant Gives You More for Your Money?</title>
+      <link>http://localhost:1313/articles/chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money/</guid>
+      <description>Compare ChatGPT, Claude pricing and features. Updated March 2026.</description>
+    </item>
+    <item>
+      <title>Cheapest AI Tools for Students in 2024: Top Picks for Every Budget</title>
+      <link>http://localhost:1313/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget/</guid>
+      <description>Compare ChatGPT, Claude, Copy.ai pricing and features. Updated March 2026.</description>
+    </item>
+    <item>
+      <title>Is Grammarly Premium Worth It in 2026? An Honest Review</title>
+      <link>http://localhost:1313/articles/is-grammarly-premium-worth-it-in-2026-an-honest-review/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/is-grammarly-premium-worth-it-in-2026-an-honest-review/</guid>
+      <description>Compare Grammarly pricing and features. Updated March 2026.</description>
+    </item>
+  </channel>
+</rss>
