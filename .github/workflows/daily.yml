@@ -1,0 +1,52 @@
+name: Daily pipeline + deploy
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install psycopg2-binary requests beautifulsoup4 anthropic python-dotenv
+
+      - name: Create .env
+        run: |
+          cat > .env << ENVEOF
+          DATABASE_URL=${{ secrets.DATABASE_URL }}
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_OUTPUT_DIR=./site/content/articles
+          SITE_BASE_URL=https://aitoolprice.com
+          SITE_NAME=AI Tool Price
+          LOG_LEVEL=INFO
+          LOG_FILE=pipeline.log
+          ENVEOF
+
+      - name: Run pipeline
+        run: python run.py
+
+      - name: Commit articles
+        run: |
+          git config user.name "AiToolPrice Bot"
+          git config user.email "bot@aitoolprice.com"
+          git add site/content/articles/
+          git diff --staged --quiet || git commit -m "auto: daily update $(date +%Y-%m-%d)"
+          git push
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"
