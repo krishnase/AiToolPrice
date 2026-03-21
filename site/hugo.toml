@@ -20,10 +20,7 @@ theme = "PaperMod"
   Title = "AI Tool Price"
   Content = "Track pricing, compare plans and catch price changes across 100+ AI tools — updated automatically."
  
-[[params.socialIcons]]
-  name = "github"
-  url  = "https://github.com/krishnase/AiToolPrice"
- 
+
 [menu]
   [[menu.main]]
     name       = "Articles"
