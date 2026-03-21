@@ -190,3 +190,119 @@ Done. Articles written: 5
 2026-03-20 10:25:29,770 [INFO]   Price changes detected : 0
 2026-03-20 10:25:29,770 [INFO]   Articles generated     : 5
 2026-03-20 10:25:29,771 [INFO] ============================================================
+2026-03-20 18:09:41,390 [INFO] ============================================================
+2026-03-20 18:09:41,391 [INFO] AI PRICING TRACKER — Daily Run — 2026-03-20 18:09
+2026-03-20 18:09:41,391 [INFO] ============================================================
+2026-03-20 18:09:41,391 [INFO] 
+[STEP 1/2] Running data pipeline...
+2026-03-20 18:09:41,795 [INFO] ============================================================
+2026-03-20 18:09:41,795 [INFO] Pipeline started at 2026-03-20T18:09:41.795749
+2026-03-20 18:09:41,795 [INFO] ============================================================
+2026-03-20 18:09:42,407 [INFO] Connected to Supabase
+2026-03-20 18:09:42,546 [INFO] Pricing plans already seeded (33 rows) — skipping seed
+2026-03-20 18:09:42,611 [INFO] Checking 10 tools for price changes...
+2026-03-20 18:09:42,612 [INFO] 
+Checking: ChatGPT
+2026-03-20 18:09:42,806 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 18:09:45,924 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 18:09:52,036 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-20 18:09:52,038 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 18:09:55,173 [INFO] 
+Checking: Claude
+2026-03-20 18:09:56,156 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 18:09:59,274 [INFO] 
+Checking: Jasper AI
+2026-03-20 18:09:59,915 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 18:10:03,033 [INFO] 
+Checking: Copy.ai
+2026-03-20 18:10:03,738 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 18:10:06,857 [INFO] 
+Checking: Writesonic
+2026-03-20 18:10:07,729 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 18:10:10,838 [INFO] 
+Checking: Midjourney
+2026-03-20 18:10:10,945 [INFO]   Manual tool — keeping existing DB prices
+2026-03-20 18:10:10,945 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 18:10:14,057 [INFO] 
+Checking: GitHub Copilot
+2026-03-20 18:10:15,141 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 18:10:18,258 [INFO] 
+Checking: Perplexity AI
+2026-03-20 18:10:18,485 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 18:10:21,598 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 18:10:27,762 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://www.perplexity.ai/pro
+2026-03-20 18:10:27,764 [INFO]   No scraped data — keeping existing 2 plans in DB
+2026-03-20 18:10:30,874 [INFO] 
+Checking: Notion AI
+2026-03-20 18:10:32,354 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 18:10:35,545 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 18:10:41,721 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://www.notion.com/pricing
+2026-03-20 18:10:41,721 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-20 18:10:44,850 [INFO] 
+Checking: Grammarly
+2026-03-20 18:10:47,127 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-20 18:10:50,254 [INFO] 
+Pipeline complete. Total changes: 0
+2026-03-20 18:10:50,256 [INFO] 
+[STEP 2/2] Running content generator...
+2026-03-20 18:10:53,693 [INFO] ============================================================
+2026-03-20 18:10:53,693 [INFO] Content generator started at 2026-03-20T18:10:53.693757
+2026-03-20 18:10:53,693 [INFO] ============================================================
+2026-03-20 18:10:54,305 [INFO] Found 0 unaddressed price changes
+2026-03-20 18:10:54,367 [INFO] Found 5 pending keyword articles
+2026-03-20 18:10:54,368 [INFO]   Generating keyword article: 'best AI image generators pricing'
+2026-03-20 18:11:22,106 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 18:11:22,509 [INFO]   Wrote: site/content/articles/best-ai-image-generator-pricing-in-2024-plans-costs-which-is-right-for-you.md
+2026-03-20 18:11:22,754 [INFO]   Generating keyword article: 'GitHub Copilot vs alternatives'
+2026-03-20 18:11:55,305 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 18:11:55,368 [INFO]   Wrote: site/content/articles/github-copilot-vs-alternatives-how-it-stacks-up-against-claude-in-2024.md
+2026-03-20 18:11:55,582 [INFO]   Generating keyword article: 'Jasper AI pricing 2026'
+2026-03-20 18:12:30,200 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 18:12:30,261 [INFO]   Wrote: site/content/articles/jasper-ai-pricing-2026-plans-costs-and-which-tier-is-right-for-you.md
+2026-03-20 18:12:30,793 [INFO]   Generating keyword article: 'Writesonic vs Copy.ai'
+2026-03-20 18:12:54,164 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 18:12:54,230 [INFO]   Wrote: site/content/articles/writesonic-vs-copyai-which-ai-writing-tool-is-right-for-you.md
+2026-03-20 18:12:54,445 [INFO]   Generating keyword article: 'AI tools for marketing teams'
+2026-03-20 18:13:27,706 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 18:13:27,779 [INFO]   Wrote: site/content/articles/best-ai-tools-for-marketing-teams-in-2024-jasper-ai-copyai-writesonic-notion-ai-.md
+2026-03-20 18:13:27,999 [INFO] 
+Done. Articles written: 5
+2026-03-20 18:13:28,000 [INFO] 
+============================================================
+2026-03-20 18:13:28,000 [INFO] Run complete in 226s
+2026-03-20 18:13:28,000 [INFO]   Price changes detected : 0
+2026-03-20 18:13:28,000 [INFO]   Articles generated     : 5
+2026-03-20 18:13:28,000 [INFO] ============================================================
+2026-03-21 09:21:54,465 [INFO] ============================================================
+2026-03-21 09:21:54,465 [INFO] AI PRICING TRACKER — Daily Run — 2026-03-21 09:21
+2026-03-21 09:21:54,466 [INFO] ============================================================
+2026-03-21 09:21:54,466 [INFO] 
+[STEP 1/2] Running data pipeline...
+2026-03-21 09:21:54,766 [INFO] ============================================================
+2026-03-21 09:21:54,766 [INFO] Pipeline started at 2026-03-21T09:21:54.766920
+2026-03-21 09:21:54,767 [INFO] ============================================================
+2026-03-21 09:21:55,340 [INFO] Connected to Supabase
+2026-03-21 09:21:55,483 [INFO] Pricing plans already seeded (33 rows) — skipping seed
+2026-03-21 09:21:55,549 [INFO] Checking 10 tools for price changes...
+2026-03-21 09:21:55,550 [INFO] 
+Checking: ChatGPT
+2026-03-21 09:21:55,763 [WARNING]   Attempt 1 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-21 09:21:58,879 [WARNING]   Attempt 2 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-21 09:22:04,990 [WARNING]   Attempt 3 failed: 403 Client Error: Forbidden for url: https://openai.com/chatgpt/pricing
+2026-03-21 09:22:04,993 [INFO]   No scraped data — keeping existing 4 plans in DB
+2026-03-21 09:22:08,129 [INFO] 
+Checking: Claude
+2026-03-21 09:22:09,411 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-21 09:22:12,524 [INFO] 
+Checking: Jasper AI
+2026-03-21 09:22:13,126 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-21 09:22:16,235 [INFO] 
+Checking: Copy.ai
+2026-03-21 09:22:16,957 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-21 09:22:20,065 [INFO] 
+Checking: Writesonic
+2026-03-21 09:22:20,728 [INFO]   No scraped data — keeping existing 3 plans in DB
+2026-03-21 09:22:23,835 [INFO] 
+Checking: Midjourney
+2026-03-21 09:22:23,947 [INFO]   Manual tool — keeping existing DB prices
+2026-03-21 09:22:23,947 [INFO]   No scraped data — keeping existing 4 plans in DB
