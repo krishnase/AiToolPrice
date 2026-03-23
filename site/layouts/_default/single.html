@@ -1,0 +1,81 @@
+{{- define "main" }}
+
+<article class="atp-article">
+
+  <!-- Article Hero Header -->
+  <header class="atp-article-header">
+    {{- $type := .Params.type | default "article" }}
+    <div class="atp-article-meta-top">
+      <span class="atp-type-badge atp-type-{{ $type }}">
+        {{- if eq $type "comparison" }}⚖️ Comparison
+        {{- else if eq $type "review" }}🔍 Review
+        {{- else if eq $type "roundup" }}🏆 Roundup
+        {{- else if eq $type "price_change" }}🔔 Price Update
+        {{- else }}📝 Article{{- end }}
+      </span>
+      <span class="atp-reading-time">{{ .ReadingTime }} min read</span>
+      <span class="atp-updated">Updated {{ .Lastmod.Format "Jan 2, 2006" }}</span>
+    </div>
+    <h1 class="atp-article-title">{{ .Title }}</h1>
+    {{- if .Description }}
+    <p class="atp-article-desc">{{ .Description }}</p>
+    {{- end }}
+  </header>
+
+  <!-- Article Body: TOC sidebar + Content -->
+  <div class="atp-article-body">
+
+    <!-- Sticky TOC Sidebar -->
+    {{- if (.Param "ShowToc") }}
+    <aside class="atp-toc-sidebar">
+      <div class="atp-toc-inner">
+        <div class="atp-toc-title">📋 On This Page</div>
+        {{- partial "toc.html" . }}
+      </div>
+    </aside>
+    {{- end }}
+
+    <!-- Main Content -->
+    <div class="atp-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+
+      <!-- Bottom CTA -->
+      <div class="atp-bottom-cta">
+        <div class="atp-bottom-cta-inner">
+          <div>
+            <strong>Get price alerts for free</strong>
+            <p>We'll notify you when any AI tool changes its pricing.</p>
+          </div>
+          <a href="/#newsletter-form" class="btn-primary">Get Alerts →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  {{- $currentPage := . }}
+  {{- $section := .Section }}
+  {{- $related := where site.RegularPages "Section" $section | first 4 }}
+  {{- $related = where $related "Permalink" "ne" .Permalink }}
+  {{- if $related }}
+  <section class="atp-related">
+    <div class="section-header">
+      <h2>Related Articles</h2>
+    </div>
+    <div class="article-grid">
+      {{- range first 3 $related }}
+      <a href="{{ .Permalink }}" class="article-card">
+        <div class="card-tag">{{ .Params.type | default "Article" }}</div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description | default (.Summary | truncate 100) }}</p>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+</article>
+
+{{- end }}

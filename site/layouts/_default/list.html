@@ -1,0 +1,67 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- else }}
+
+{{- if not .IsHome }}
+<!-- Section Hero Banner -->
+<div class="atp-section-hero">
+  <div class="atp-section-hero-inner">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <p>{{ .Description | markdownify }}</p>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+{{- if .IsHome }}
+  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- end }}
+
+{{- $paginator := .Paginate $pages }}
+
+{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+<!-- Article Grid -->
+<div class="atp-list-grid">
+  {{- range $paginator.Pages }}
+  {{- $type := .Params.type | default "article" }}
+  <a href="{{ .Permalink }}" class="article-card">
+    <div class="card-tag atp-tag-{{ $type }}">
+      {{- if eq $type "comparison" }}⚖️ Comparison
+      {{- else if eq $type "review" }}🔍 Review
+      {{- else if eq $type "roundup" }}🏆 Roundup
+      {{- else if eq $type "price_change" }}🔔 Price Update
+      {{- else }}📝 Article{{- end }}
+    </div>
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Description | default (.Summary | plainify | truncate 110) }}</p>
+    <div class="atp-card-footer">
+      <span class="atp-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="atp-card-read">{{ .ReadingTime }} min read →</span>
+    </div>
+  </a>
+  {{- end }}
+</div>
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Previous</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}
+{{- end }}
