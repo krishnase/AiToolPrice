@@ -44,7 +44,7 @@ USER_AGENT = (
 
 # ── Pipeline behavior ──────────────────────────────────────────
 PRICE_CHANGE_THRESHOLD_PCT = 5.0
-MAX_ARTICLES_PER_RUN       = 5
+MAX_ARTICLES_PER_RUN       = 15
 
 # ── Logging ────────────────────────────────────────────────────
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
