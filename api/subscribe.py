@@ -19,7 +19,10 @@ ALLOWED_ORIGINS = {
 
 
 def get_conn():
-    return psycopg2.connect(os.environ["DATABASE_URL"])
+    url = os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_PRISMA_URL")
+    if not url:
+        raise RuntimeError("No database URL configured")
+    return psycopg2.connect(url)
 
 
 class handler(BaseHTTPRequestHandler):
