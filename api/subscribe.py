@@ -8,8 +8,14 @@ import json
 import os
 import psycopg2
 import re
+import traceback
 
 EMAIL_RE = re.compile(r'^[^@\s]+@[^@\s]+\.[^@\s]+$')
+
+ALLOWED_ORIGINS = {
+    "https://aitoolprice.com",
+    "https://www.aitoolprice.com",
+}
 
 
 def get_conn():
@@ -19,8 +25,8 @@ def get_conn():
 class handler(BaseHTTPRequestHandler):
 
     def do_OPTIONS(self):
-        self._cors()
         self.send_response(200)
+        self._cors()
         self.end_headers()
 
     def do_POST(self):
@@ -37,11 +43,7 @@ class handler(BaseHTTPRequestHandler):
             conn = get_conn()
             cur = conn.cursor()
             cur.execute(
-                """
-                INSERT INTO subscribers (email)
-                VALUES (%s)
-                ON CONFLICT (email) DO NOTHING
-                """,
+                "INSERT INTO subscribers (email) VALUES (%s) ON CONFLICT (email) DO NOTHING",
                 (email,),
             )
             inserted = cur.rowcount
@@ -53,11 +55,14 @@ class handler(BaseHTTPRequestHandler):
             else:
                 self._json(200, {"message": "You're already subscribed!"})
 
-        except Exception as e:
+        except Exception:
+            print(traceback.format_exc())
             self._json(500, {"error": "Something went wrong. Please try again."})
 
     def _cors(self):
-        self.send_header("Access-Control-Allow-Origin", "https://aitoolprice.com")
+        origin = self.headers.get("Origin", "")
+        allowed = origin if origin in ALLOWED_ORIGINS else "https://aitoolprice.com"
+        self.send_header("Access-Control-Allow-Origin", allowed)
         self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
@@ -71,4 +76,4 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def log_message(self, *args):
-        pass  # suppress default access logs
+        pass
