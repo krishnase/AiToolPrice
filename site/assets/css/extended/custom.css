@@ -1,3 +1,8 @@
+/* ── Override PaperMod container width ────────────────────── */
+:root {
+  --main-width: 1100px;
+}
+
 /* ── Brand Variables ───────────────────────────────────────── */
 :root {
   --brand-blue: #2563eb;
@@ -110,7 +115,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 .home-section { max-width: 1100px; margin: 56px auto; padding: 0 24px; }
 
 /* ── FEATURED COMPARISON TABLE ─────────────────────────────── */
-.comparison-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.comparison-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
+
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -120,6 +126,12 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+.comparison-table col:nth-child(1) { width: 28%; }
+.comparison-table col:nth-child(2) { width: 18%; }
+.comparison-table col:nth-child(3) { width: 14%; }
+.comparison-table col:nth-child(4) { width: 22%; }
+.comparison-table col:nth-child(5) { width: 18%; }
+
 .comparison-table thead tr {
   background: #0f172a;
   color: #fff;

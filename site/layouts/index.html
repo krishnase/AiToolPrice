@@ -1,5 +1,4 @@
-{{- define "main" }}
-
+{{- define "above-main" }}
 <!-- HERO -->
 <section class="hero-section">
   <h1>Compare AI Tool Pricing —<br><span>Updated Daily</span></h1>
@@ -17,6 +16,9 @@
   <span>💰 <strong>Free tier</strong> options included</span>
   <span>📊 <strong>Price history</strong> monitored</span>
 </div>
+{{- end }}
+
+{{- define "main" }}
 
 <!-- FEATURED COMPARISON TABLE -->
 <div class="home-section">
@@ -25,7 +27,14 @@
     <a href="/compare/">See all comparisons →</a>
   </div>
   <div class="comparison-wrap">
-    <table class="comparison-table">
+    <table class="comparison-table" style="width:100%">
+      <colgroup>
+        <col style="width:26%">
+        <col style="width:18%">
+        <col style="width:14%">
+        <col style="width:24%">
+        <col style="width:18%">
+      </colgroup>
       <thead>
         <tr>
           <th>Tool</th>
@@ -165,10 +174,11 @@
   <div class="newsletter-section">
     <h2>📬 Get Price Alerts — Free</h2>
     <p>We'll notify you when any AI tool raises or lowers its prices. No spam, just pricing intelligence.</p>
-    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
-      <input type="email" placeholder="your@email.com" required />
-      <button type="submit">Get Alerts →</button>
+    <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+      <input type="email" id="newsletter-email" placeholder="your@email.com" required />
+      <button type="submit" id="newsletter-btn">Get Alerts →</button>
     </form>
+    <div id="newsletter-msg" style="display:none;margin-top:12px;font-weight:600;"></div>
     <p style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">No spam. Unsubscribe any time.</p>
   </div>
 </div>
@@ -216,9 +226,36 @@ function showFinderResult() {
   document.getElementById('finder-rec-link').href = rec.link;
   document.getElementById('finder-result').style.display = 'block';
 }
-function handleNewsletterSubmit(e) {
+async function handleNewsletterSubmit(e) {
   e.preventDefault();
-  e.target.innerHTML = '<p style="color:#16a34a;font-weight:600;">✅ You\'re subscribed! We\'ll alert you when prices change.</p>';
+  const email = document.getElementById('newsletter-email').value;
+  const btn = document.getElementById('newsletter-btn');
+  const msg = document.getElementById('newsletter-msg');
+  btn.disabled = true;
+  btn.textContent = 'Subscribing...';
+  try {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+    document.getElementById('newsletter-form').style.display = 'none';
+    msg.style.display = 'block';
+    if (res.ok) {
+      msg.style.color = '#16a34a';
+      msg.textContent = '✅ ' + data.message;
+    } else {
+      msg.style.color = '#dc2626';
+      msg.textContent = '❌ ' + (data.error || 'Something went wrong.');
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = 'Get Alerts →';
+    msg.style.display = 'block';
+    msg.style.color = '#dc2626';
+    msg.textContent = '❌ Network error. Please try again.';
+  }
 }
 </script>
 

@@ -21,7 +21,10 @@ theme = "PaperMod"
   env = "production"
 
 [params.label]
-  text = "💰 AI Tool Price"
+  text = "AI Tool Price"
+  icon = "/logo.svg"
+  iconHeight = 32
+  iconWidth = 36
 
 [menu]
   [[menu.main]]
