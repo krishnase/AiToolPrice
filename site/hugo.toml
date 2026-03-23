@@ -1,35 +1,49 @@
 baseURL = "https://aitoolprice.com"
 languageCode = "en-us"
-title = "AI Tool Price"
+title = "AI Tool Price — Compare AI Tool Pricing"
 theme = "PaperMod"
+
 [pagination]
-  pagerSize = 10
- 
+  pagerSize = 12
+
 [params]
-  description = "Track and compare AI tool pricing in one place"
+  description = "Compare AI tool pricing side by side. Track ChatGPT, Claude, Jasper, Grammarly and more — updated daily."
   author = "AI Tool Price"
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
   hideFooter = false
   disableThemeToggle = false
- 
-[params.homeInfoParams]
-  Title = "AI Tool Price"
-  Content = "Track pricing, compare plans and catch price changes across 100+ AI tools — updated automatically."
- 
+  env = "production"
+
+[params.label]
+  text = "💰 AI Tool Price"
 
 [menu]
   [[menu.main]]
-    name       = "Articles"
-    url        = "/articles/"
-    weight     = 1
+    name   = "Articles"
+    url    = "/articles/"
+    weight = 1
   [[menu.main]]
-    name       = "Compare"
-    url        = "/compare/"
-    weight     = 2
- 
+    name   = "Compare"
+    url    = "/compare/"
+    weight = 2
+  [[menu.main]]
+    name   = "🔍 Find My Tool"
+    url    = "/#finder-q1"
+    weight = 3
+    [menu.main.params]
+      class = "nav-cta"
+
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.highlight]
+  style = "github"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

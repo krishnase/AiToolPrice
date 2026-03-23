@@ -1,0 +1,225 @@
+{{- define "main" }}
+
+<!-- HERO -->
+<section class="hero-section">
+  <h1>Compare AI Tool Pricing —<br><span>Updated Daily</span></h1>
+  <p>Stop overpaying. Track prices across 10+ AI tools, catch plan changes instantly, and find the best deal for your budget.</p>
+  <div class="hero-buttons">
+    <a href="/compare/" class="btn-primary">⚡ Compare Tools Now</a>
+    <a href="/articles/" class="btn-secondary">Read Latest Articles</a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span>✅ <strong>10 AI tools</strong> tracked</span>
+  <span>🔄 <strong>Updated daily</strong> via pipeline</span>
+  <span>💰 <strong>Free tier</strong> options included</span>
+  <span>📊 <strong>Price history</strong> monitored</span>
+</div>
+
+<!-- FEATURED COMPARISON TABLE -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>🏆 Top AI Tools — Price Comparison</h2>
+    <a href="/compare/">See all comparisons →</a>
+  </div>
+  <div class="comparison-wrap">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Starting Price</th>
+          <th>Free Tier</th>
+          <th>Best For</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="recommended-row">
+          <td class="tool-name-cell">ChatGPT <small>by OpenAI</small></td>
+          <td class="price-cell">$20/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td><span class="best-for-tag">General AI</span></td>
+          <td><a href="https://openai.com/chatgpt" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Claude <small>by Anthropic</small></td>
+          <td class="price-cell">$20/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td><span class="best-for-tag">Writing & Code</span></td>
+          <td><a href="https://claude.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">GitHub Copilot <small>by GitHub</small></td>
+          <td class="price-cell">$10/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td><span class="best-for-tag">Coding</span></td>
+          <td><a href="https://github.com/features/copilot" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Jasper AI <small>Marketing copy</small></td>
+          <td class="price-cell">$39/mo</td>
+          <td><span class="no-free-badge">✗ Paid</span></td>
+          <td><span class="best-for-tag">Marketing</span></td>
+          <td><a href="https://www.jasper.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">See Plans →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Perplexity AI <small>AI search</small></td>
+          <td class="price-cell">$20/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td><span class="best-for-tag">Research</span></td>
+          <td><a href="https://www.perplexity.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Grammarly <small>Writing assistant</small></td>
+          <td class="price-cell">$12/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td><span class="best-for-tag">Grammar & Style</span></td>
+          <td><a href="https://www.grammarly.com" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TOOL FINDER WIDGET -->
+<div class="home-section">
+  <div class="tool-finder">
+    <h2>🎯 Find Your Perfect AI Tool</h2>
+    <p>Answer 3 quick questions and we'll match you with the best tool for your needs.</p>
+    <div id="finder-q1">
+      <div class="finder-question">What do you mainly use AI for?</div>
+      <div class="finder-steps">
+        <div class="finder-step" onclick="finderSelect(1,'writing')">✍️ Writing</div>
+        <div class="finder-step" onclick="finderSelect(1,'coding')">💻 Coding</div>
+        <div class="finder-step" onclick="finderSelect(1,'research')">🔍 Research</div>
+        <div class="finder-step" onclick="finderSelect(1,'images')">🎨 Images</div>
+        <div class="finder-step" onclick="finderSelect(1,'productivity')">📋 Productivity</div>
+      </div>
+    </div>
+    <div id="finder-q2" style="display:none">
+      <div class="finder-question">What's your monthly budget?</div>
+      <div class="finder-steps">
+        <div class="finder-step" onclick="finderSelect(2,'free')">🆓 Free only</div>
+        <div class="finder-step" onclick="finderSelect(2,'low')">💵 Under $20</div>
+        <div class="finder-step" onclick="finderSelect(2,'mid')">💵 $20–$50</div>
+        <div class="finder-step" onclick="finderSelect(2,'high')">💵 $50+</div>
+      </div>
+    </div>
+    <div id="finder-q3" style="display:none">
+      <div class="finder-question">Are you a solo user or a team?</div>
+      <div class="finder-steps">
+        <div class="finder-step" onclick="finderSelect(3,'solo')">👤 Solo</div>
+        <div class="finder-step" onclick="finderSelect(3,'team')">👥 Team</div>
+      </div>
+    </div>
+    <div id="finder-result">
+      <h3 id="finder-rec-title">Our Recommendation</h3>
+      <p id="finder-rec-desc"></p>
+      <a id="finder-rec-link" href="/compare/" class="btn-primary">See Full Comparison →</a>
+    </div>
+  </div>
+</div>
+
+<!-- LATEST ARTICLES -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>📰 Latest Articles</h2>
+    <a href="/articles/">View all →</a>
+  </div>
+  <div class="article-grid">
+    {{- $pages := where .Site.RegularPages "Section" "articles" }}
+    {{- range first 6 $pages }}
+    <a href="{{ .Permalink }}" class="article-card">
+      <div class="card-tag">{{ .Params.type | default "Article" }}</div>
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description | default (.Summary | truncate 100) }}</p>
+    </a>
+    {{- end }}
+  </div>
+</div>
+
+<!-- COMPARE ARTICLES -->
+{{- $comparePages := where .Site.RegularPages "Section" "compare" }}
+{{- if $comparePages }}
+<div class="home-section">
+  <div class="section-header">
+    <h2>⚖️ Head-to-Head Comparisons</h2>
+    <a href="/compare/">See all →</a>
+  </div>
+  <div class="article-grid">
+    {{- range first 3 $comparePages }}
+    <a href="{{ .Permalink }}" class="article-card">
+      <div class="card-tag">Comparison</div>
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description | default (.Summary | truncate 100) }}</p>
+    </a>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
+
+<!-- NEWSLETTER -->
+<div class="home-section">
+  <div class="newsletter-section">
+    <h2>📬 Get Price Alerts — Free</h2>
+    <p>We'll notify you when any AI tool raises or lowers its prices. No spam, just pricing intelligence.</p>
+    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+      <input type="email" placeholder="your@email.com" required />
+      <button type="submit">Get Alerts →</button>
+    </form>
+    <p style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">No spam. Unsubscribe any time.</p>
+  </div>
+</div>
+
+<script>
+var finderAnswers = {};
+function finderSelect(q, val) {
+  finderAnswers['q' + q] = val;
+  document.querySelectorAll('#finder-q' + q + ' .finder-step').forEach(function(s) { s.classList.remove('active'); });
+  event.target.classList.add('active');
+  setTimeout(function() {
+    if (q < 3) {
+      document.getElementById('finder-q' + q).style.display = 'none';
+      document.getElementById('finder-q' + (q+1)).style.display = 'block';
+    } else {
+      document.getElementById('finder-q3').style.display = 'none';
+      showFinderResult();
+    }
+  }, 300);
+}
+function showFinderResult() {
+  var use = finderAnswers.q1, budget = finderAnswers.q2;
+  var rec = { title: '', desc: '', link: '/compare/' };
+  if (use === 'coding') {
+    rec.title = '💻 GitHub Copilot or Claude';
+    rec.desc = 'For coding, GitHub Copilot ($10/mo) integrates directly into your IDE. Claude Pro is excellent for architecture and complex reasoning.';
+  } else if (use === 'writing' && budget === 'free') {
+    rec.title = '✍️ ChatGPT Free or Claude Free';
+    rec.desc = 'Both offer generous free tiers for writing tasks. Claude tends to produce cleaner prose; ChatGPT has more integrations.';
+  } else if (use === 'writing') {
+    rec.title = '✍️ Jasper AI or ChatGPT Plus';
+    rec.desc = 'Jasper ($39/mo) is purpose-built for marketing copy. ChatGPT Plus ($20/mo) is more versatile for general writing tasks.';
+  } else if (use === 'research') {
+    rec.title = '🔍 Perplexity AI Pro';
+    rec.desc = 'Perplexity is built for research — it cites sources, searches the web in real-time, and gives concise answers. Pro is $20/mo.';
+  } else if (use === 'images') {
+    rec.title = '🎨 Midjourney';
+    rec.desc = 'Midjourney produces the highest quality AI images. Plans start at $10/mo for ~200 images.';
+  } else {
+    rec.title = '📋 Notion AI or Grammarly';
+    rec.desc = 'For productivity and writing assistance, Notion AI ($10/mo add-on) and Grammarly ($12/mo) are top choices.';
+  }
+  document.getElementById('finder-rec-title').textContent = rec.title;
+  document.getElementById('finder-rec-desc').textContent = rec.desc;
+  document.getElementById('finder-rec-link').href = rec.link;
+  document.getElementById('finder-result').style.display = 'block';
+}
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  e.target.innerHTML = '<p style="color:#16a34a;font-weight:600;">✅ You\'re subscribed! We\'ll alert you when prices change.</p>';
+}
+</script>
+
+{{- end }}

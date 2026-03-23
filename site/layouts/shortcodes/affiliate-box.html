@@ -1,0 +1,11 @@
+<div class="affiliate-box">
+  <div class="affiliate-box-icon">{{ .Get "icon" | default "⭐" }}</div>
+  <div class="affiliate-box-content">
+    <strong>{{ .Get "title" }}</strong>
+    <span>{{ .Get "desc" }}</span>
+    <div class="affiliate-disclosure">*Affiliate link — we may earn a commission at no extra cost to you.</div>
+  </div>
+  <a href="{{ .Get "url" }}" class="btn-primary" rel="nofollow noopener" target="_blank">
+    {{ .Get "cta" | default "See Pricing →" }}
+  </a>
+</div>

@@ -1,0 +1,11 @@
+{{ $dir := .Get "direction" | default "neutral" }}
+{{ $class := "price-alert" }}
+{{ if eq $dir "up" }}{{ $class = "price-alert price-alert-up" }}{{ end }}
+{{ if eq $dir "down" }}{{ $class = "price-alert price-alert-down" }}{{ end }}
+<div class="{{ $class }}">
+  {{ if eq $dir "up" }}🔺{{ else if eq $dir "down" }}🔻{{ else }}💰{{ end }}
+  <div>
+    <strong>{{ .Get "tool" }} Price {{ if eq $dir "up" }}Increase{{ else if eq $dir "down" }}Decrease{{ else }}Update{{ end }}</strong><br>
+    <span>{{ .Inner }}</span>
+  </div>
+</div>
