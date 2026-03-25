@@ -148,6 +148,12 @@ slug: "{slug}"
 description: "{meta_desc}"
 type: "{article_type}"
 keywords: ["{keyword}"]
+author: "AI Tool Price Editorial Team"
+canonicalURL: "{SITE_BASE_URL}/articles/{slug}/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 draft: false
 ---
 
@@ -158,51 +164,91 @@ draft: false
 
 
 # ── Prompt templates ───────────────────────────────────────────
-SYSTEM_PROMPT = """You are an expert technology journalist and SEO writer specializing in AI tools.
-Write clear, accurate, data-driven content. Always use the exact pricing data provided — never invent prices.
-Format all output as clean Markdown."""
+SYSTEM_PROMPT = """You are an expert technology journalist and SEO content writer specializing in AI tools and SaaS pricing.
+Write clear, accurate, data-driven content targeted at real people making purchasing decisions.
+Always use the exact pricing data provided — never invent or estimate prices.
+Write in a helpful, direct, and unbiased tone. Avoid filler phrases and AI-sounding language.
+Format all output as clean Markdown. Do not include a YAML front matter block — just the article body starting from the H1."""
 
 
 def price_change_prompt(tool_name, plan_name, old_price, new_price, change_pct, direction, pricing_data):
     action = "raised" if direction == "increase" else "lowered"
-    return f"""Write a 400-500 word news article about a pricing change.
+    return f"""Write a 700-900 word news article about a pricing change for {tool_name}.
 
-FACTS (use exactly):
+FACTS (use exactly as stated — do not round or alter):
 - Tool: {tool_name}
-- Plan: {plan_name}
+- Plan affected: {plan_name}
 - Old price: ${old_price:.2f}/month
 - New price: ${new_price:.2f}/month
 - Change: {change_pct:+.1f}% ({action})
 - Date: {datetime.now().strftime("%B %Y")}
 
-CURRENT PRICING for {tool_name}:
+CURRENT FULL PRICING for {tool_name}:
 {pricing_data}
 
-Write: H1 headline, what changed, who is affected, comparison to 1-2 competitors, bottom line recommendation.
-Format as Markdown with H1 and H2 sections."""
+REQUIRED STRUCTURE (use these H2 sections in order):
+1. H1: Compelling headline that includes the tool name and the word "pricing" (e.g. "{tool_name} {plan_name} Price {action.title()} to ${new_price:.2f}/Month")
+2. ## What Changed — explain the old price, new price, exact % change, and which users are affected
+3. ## Who Is Affected — describe the typical user on this plan and the real-world dollar impact (monthly and annual)
+4. ## How {tool_name} Now Compares — compare to 1-2 direct competitors using exact pricing from the data above or well-known public prices; use a Markdown table
+5. ## Should You Stay, Switch, or Downgrade? — give a concrete recommendation for each type of user (power user, casual user, team buyer)
+6. ## Frequently Asked Questions — 3 Q&As covering: why the price changed, alternatives, and whether annual billing helps
+7. ## Bottom Line — one clear paragraph summarizing the verdict
+
+Tone: informative, honest, practical. No hype. No filler sentences."""
 
 
 def comparison_prompt(tool_names, keyword, pricing_data):
-    return f"""Write a 600-700 word comparison article for: "{keyword}"
+    tools_str = " vs ".join(tool_names)
+    return f"""Write a 1,200-1,500 word comparison article targeting the keyword: "{keyword}"
 
-Tools: {" vs ".join(tool_names)}
+Tools being compared: {tools_str}
 
-PRICING DATA (use exact figures only):
+PRICING DATA (use exact figures — do not round or alter):
 {pricing_data}
 
-Include: H1 with keyword, intro, Markdown comparison table, one H2 per tool, "Which should you choose?" section, 3-question FAQ, conclusion.
-Tone: helpful, direct, unbiased."""
+REQUIRED STRUCTURE (use these sections in order):
+1. H1: Include the exact keyword "{keyword}"
+2. ## TL;DR Comparison Table — a Markdown table with columns: Feature, {", ".join(tool_names)}. Include rows for: Free Tier, Starting Price, Team/Business Plan, Key Differentiator, Best For
+3. ## Introduction (2-3 paragraphs) — who this comparison is for, what criteria were used (price, features, use case fit), and a one-sentence verdict teaser
+4. One H2 section per tool — for each tool include:
+   - 1-paragraph overview of what it does and who it's built for
+   - Pricing breakdown (all plans, exact prices, annual savings)
+   - Pros (bullet list, 4-5 items, specific)
+   - Cons (bullet list, 3-4 items, honest)
+   - Best For: one sentence
+5. ## Head-to-Head: Key Differences — 3-4 specific comparisons (e.g. free tier quality, team features, API access) written as short paragraphs, not bullets
+6. ## Which Should You Choose? — decision tree format: "Choose [Tool A] if...", "Choose [Tool B] if..." for each tool
+7. ## Frequently Asked Questions — 4 Q&As addressing: price parity, free tier limits, switching costs, and a niche use-case question
+8. ## Conclusion — 2-paragraph summary with a clear recommendation
+
+Tone: helpful, direct, unbiased. Cite exact prices. Avoid vague superlatives."""
 
 
 def roundup_prompt(keyword, pricing_data, tool_names):
-    return f"""Write a 700-800 word roundup article for: "{keyword}"
+    return f"""Write a 1,400-1,700 word roundup guide targeting the keyword: "{keyword}"
 
-Tools: {", ".join(tool_names)}
+Tools covered: {", ".join(tool_names)}
 
-PRICING DATA (use exact figures only):
+PRICING DATA (use exact figures — do not round or alter):
 {pricing_data}
 
-Include: H1, intro with criteria, H2 per tool (summary/pricing/pros/cons/best for), summary comparison table, "How to choose" section, 3-question FAQ."""
+REQUIRED STRUCTURE (use these sections in order):
+1. H1: Include the exact keyword "{keyword}"
+2. ## Introduction — 2-3 paragraphs explaining: who this guide is for, what makes a good AI tool in this category, and the evaluation criteria used (price, features, ease of use, value)
+3. ## Quick Comparison Table — Markdown table with: Tool Name, Free Tier, Starting Price, Best For, Our Rating (/5)
+4. One H2 section per tool — for each tool include:
+   - ### Overview: 2-paragraph description of the tool, its strengths, and ideal user
+   - ### Pricing: list all plans with exact monthly and annual costs
+   - ### Pros: 4-5 bullet points (specific, not generic)
+   - ### Cons: 3-4 bullet points (honest, not softened)
+   - ### Best For: one sentence describing the ideal user
+5. ## How to Choose the Right Tool — a decision guide with 4-5 "If you need X, choose Y" statements backed by the data above
+6. ## What to Watch Out For — 3-4 common mistakes buyers make (hidden limits, annual lock-in, seat minimums, etc.)
+7. ## Frequently Asked Questions — 4 Q&As covering: cheapest option, best free tier, best for beginners, best for teams
+8. ## Final Verdict — 2-paragraph wrap-up with a ranked recommendation (best overall, best value, best for beginners)
+
+Tone: authoritative but approachable. Use exact prices. Write for a reader who is actively comparing tools before buying."""
 
 
 # ── Article generation ─────────────────────────────────────────
@@ -262,7 +308,8 @@ def generate_keyword_article(conn, kw) -> int:
     lines  = content.strip().split("\n")
     title  = lines[0].lstrip("#").strip() if lines else keyword.title()
     slug   = slugify(title)
-    meta   = f"Compare {', '.join(tool_names[:3])} pricing and features. Updated {datetime.now().strftime('%B %Y')}."
+    tools_display = " vs ".join(tool_names[:3]) if article_type == "comparison" else ", ".join(tool_names[:3])
+    meta   = f"{tools_display} pricing compared: free tiers, paid plans, and which is worth it in {datetime.now().year}. Updated {datetime.now().strftime('%B %Y')}."
 
     article_id = save_article(conn, title, slug, content, meta,
                               article_type, tool_ids_str, keyword)
