@@ -4,11 +4,8 @@ date: 2026-03-25
 lastmod: 2026-03-25
 slug: "privacy-policy"
 description: "Privacy Policy for AI Tool Price. Learn how we collect, use, and protect your data."
+type: "page"
 draft: false
-showToc: false
-ShowReadingTime: false
-ShowShareButtons: false
-ShowPostNavLinks: false
 ---
 
 *Last updated: March 25, 2026*

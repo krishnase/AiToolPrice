@@ -4,11 +4,8 @@ date: 2026-03-25
 lastmod: 2026-03-25
 slug: "terms"
 description: "Terms and Conditions for using AI Tool Price (aitoolprice.com)."
+type: "page"
 draft: false
-showToc: false
-ShowReadingTime: false
-ShowShareButtons: false
-ShowPostNavLinks: false
 ---
 
 *Last updated: March 25, 2026*

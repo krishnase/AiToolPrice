@@ -418,6 +418,10 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
   gap: 48px;
   align-items: start;
 }
+/* When there is no TOC sidebar, content spans the full width */
+.atp-article-body .atp-content:first-child {
+  grid-column: 1 / -1;
+}
 
 /* TOC Sidebar */
 .atp-toc-sidebar {
@@ -573,6 +577,63 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
   .atp-list-grid { grid-template-columns: 1fr; }
   .atp-bottom-cta-inner { flex-direction: column; text-align: center; }
 }
+
+/* ── STATIC PAGES (About, Contact, Privacy, Terms) ──────────── */
+.atp-static-page .atp-article-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+.atp-static-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 0 64px;
+  line-height: 1.8;
+}
+.atp-static-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 40px 0 16px;
+  color: var(--brand-blue);
+}
+.atp-static-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+}
+.atp-static-content p { margin: 0 0 16px; }
+.atp-static-content ul, .atp-static-content ol {
+  padding-left: 1.5rem;
+  margin: 0 0 16px;
+}
+.atp-static-content li { margin-bottom: 6px; }
+.atp-static-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 0.9rem;
+}
+.atp-static-content table th {
+  background: var(--brand-gray);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--brand-border);
+}
+.atp-static-content table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--brand-border);
+}
+.atp-static-content a { color: var(--brand-blue); text-decoration: underline; }
+@media (max-width: 640px) {
+  .atp-static-content { padding: 20px 0 40px; }
+  .atp-static-content h2 { font-size: 1.2rem; }
+  .atp-static-content table { font-size: 0.82rem; }
+}
+
+/* Dark mode static pages */
+[data-theme="dark"] .atp-static-content table th { background: #1e293b; }
+[data-theme="dark"] .atp-static-content table td { border-color: #334155; color: #e2e8f0; }
 
 /* Dark mode article */
 [data-theme="dark"] .atp-toc-inner { background: #1e293b; border-color: #334155; }

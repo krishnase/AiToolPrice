@@ -1,0 +1,18 @@
+{{- define "main" }}
+
+<article class="atp-article atp-static-page">
+
+  <header class="atp-article-header">
+    <h1 class="atp-article-title">{{ .Title }}</h1>
+    {{- if .Description }}
+    <p class="atp-article-desc">{{ .Description }}</p>
+    {{- end }}
+  </header>
+
+  <div class="atp-static-content">
+    {{ .Content }}
+  </div>
+
+</article>
+
+{{- end }}

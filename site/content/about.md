@@ -4,11 +4,8 @@ date: 2026-03-25
 lastmod: 2026-03-25
 slug: "about"
 description: "Learn about AI Tool Price — the independent pricing tracker for ChatGPT, Claude, Jasper, Grammarly, and 50+ AI tools."
+type: "page"
 draft: false
-showToc: false
-ShowReadingTime: false
-ShowShareButtons: false
-ShowPostNavLinks: false
 ---
 
 ## We Track AI Tool Prices So You Don't Have To

@@ -4,11 +4,8 @@ date: 2026-03-25
 lastmod: 2026-03-25
 slug: "contact"
 description: "Contact the AI Tool Price team — pricing corrections, tool suggestions, and press inquiries."
+type: "page"
 draft: false
-showToc: false
-ShowReadingTime: false
-ShowShareButtons: false
-ShowPostNavLinks: false
 ---
 
 We'd love to hear from you. Whether you've spotted a pricing error, have a tool suggestion, or just want to say hello — reach out.
