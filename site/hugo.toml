@@ -41,6 +41,14 @@ theme = "PaperMod"
     weight = 3
     [menu.main.params]
       class = "nav-cta"
+  [[menu.main]]
+    name   = "About"
+    url    = "/about/"
+    weight = 4
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 5
 
   # Footer navigation — required for AdSense approval
   [[menu.footer]]
