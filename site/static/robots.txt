@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block build artifacts and API routes from crawlers
+Disallow: /api/
+Disallow: /.vercel/
+
+# Sitemap
+Sitemap: https://www.aitoolprice.com/sitemap.xml

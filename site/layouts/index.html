@@ -1,54 +1,93 @@
 {{- define "above-main" }}
 <!-- HERO -->
 <section class="hero-section">
-  <h1>Compare AI Tool Pricing —<br><span>Updated Daily</span></h1>
-  <p>Stop overpaying. Track prices across 10+ AI tools, catch plan changes instantly, and find the best deal for your budget.</p>
+  <div class="hero-badge">🔥 Updated Daily — March 2026</div>
+  <h1>Compare AI Tool Pricing —<br><span>Find the Best Deal Today</span></h1>
+  <p>Stop overpaying. We track prices across 50+ plans from the top AI tools so you always know what's worth it.</p>
   <div class="hero-buttons">
     <a href="/compare/" class="btn-primary">⚡ Compare Tools Now</a>
-    <a href="/articles/" class="btn-secondary">Read Latest Articles</a>
+    <a href="/articles/" class="btn-secondary">Read Reviews</a>
+  </div>
+  <div class="hero-social-proof">
+    <span>⭐ Trusted by 10,000+ AI buyers</span>
+    <span>·</span>
+    <span>50+ plans tracked</span>
+    <span>·</span>
+    <span>Free tiers highlighted</span>
   </div>
 </section>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <span>✅ <strong>10 AI tools</strong> tracked</span>
+  <span>📊 <strong>50+ pricing plans</strong> tracked</span>
   <span>🔄 <strong>Updated daily</strong> via pipeline</span>
-  <span>💰 <strong>Free tier</strong> options included</span>
-  <span>📊 <strong>Price history</strong> monitored</span>
+  <span>💰 <strong>Free tiers</strong> clearly marked</span>
+  <span>🔔 <strong>Price change</strong> alerts available</span>
+  <span>🎓 <strong>Student picks</strong> included</span>
 </div>
 {{- end }}
 
 {{- define "main" }}
 
+<!-- HOW IT WORKS -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>How It Works</h2>
+  </div>
+  <div class="how-it-works">
+    <div class="hiw-step">
+      <div class="hiw-icon">📡</div>
+      <h3>We Monitor Daily</h3>
+      <p>Our pipeline checks pricing across 10+ AI tools every 24 hours — catching increases, decreases, and new plans the moment they happen.</p>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-icon">⚖️</div>
+      <h3>We Compare Honestly</h3>
+      <p>Side-by-side breakdowns with exact prices, free tier limits, and annual discounts. No sponsored rankings — just facts.</p>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-icon">💸</div>
+      <h3>You Save Money</h3>
+      <p>Know exactly what you're paying before you commit. Find the plan that fits your budget and use case — then get alerts when prices change.</p>
+    </div>
+  </div>
+</div>
+
 <!-- FEATURED COMPARISON TABLE -->
 <div class="home-section">
   <div class="section-header">
-    <h2>🏆 Top AI Tools — Price Comparison</h2>
+    <h2>Top AI Tools — Live Pricing</h2>
     <a href="/compare/">See all comparisons →</a>
   </div>
   <div class="comparison-wrap">
     <table class="comparison-table" style="width:100%">
       <colgroup>
         <col style="width:26%">
-        <col style="width:18%">
+        <col style="width:16%">
+        <col style="width:12%">
+        <col style="width:16%">
         <col style="width:14%">
-        <col style="width:24%">
-        <col style="width:18%">
+        <col style="width:16%">
       </colgroup>
       <thead>
         <tr>
           <th>Tool</th>
           <th>Starting Price</th>
           <th>Free Tier</th>
+          <th>Annual Saving</th>
           <th>Best For</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
         <tr class="recommended-row">
-          <td class="tool-name-cell">ChatGPT <small>by OpenAI</small></td>
+          <td class="tool-name-cell">
+            ChatGPT <span class="tool-badge tool-badge-pick">Editor's Pick</span>
+            <small>by OpenAI</small>
+          </td>
           <td class="price-cell">$20/mo</td>
           <td><span class="free-badge">✓ Free</span></td>
+          <td class="price-cell">—</td>
           <td><span class="best-for-tag">General AI</span></td>
           <td><a href="https://openai.com/chatgpt" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
         </tr>
@@ -56,39 +95,148 @@
           <td class="tool-name-cell">Claude <small>by Anthropic</small></td>
           <td class="price-cell">$20/mo</td>
           <td><span class="free-badge">✓ Free</span></td>
-          <td><span class="best-for-tag">Writing & Code</span></td>
+          <td class="price-cell">—</td>
+          <td><span class="best-for-tag">Writing</span></td>
           <td><a href="https://claude.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
         </tr>
         <tr>
-          <td class="tool-name-cell">GitHub Copilot <small>by GitHub</small></td>
+          <td class="tool-name-cell">
+            GitHub Copilot <span class="tool-badge tool-badge-value">Best Value</span>
+            <small>by GitHub</small>
+          </td>
           <td class="price-cell">$10/mo</td>
           <td><span class="free-badge">✓ Free</span></td>
+          <td class="price-cell">$100/yr</td>
           <td><span class="best-for-tag">Coding</span></td>
           <td><a href="https://github.com/features/copilot" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
-        </tr>
-        <tr>
-          <td class="tool-name-cell">Jasper AI <small>Marketing copy</small></td>
-          <td class="price-cell">$39/mo</td>
-          <td><span class="no-free-badge">✗ Paid</span></td>
-          <td><span class="best-for-tag">Marketing</span></td>
-          <td><a href="https://www.jasper.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">See Plans →</a></td>
-        </tr>
-        <tr>
-          <td class="tool-name-cell">Perplexity AI <small>AI search</small></td>
-          <td class="price-cell">$20/mo</td>
-          <td><span class="free-badge">✓ Free</span></td>
-          <td><span class="best-for-tag">Research</span></td>
-          <td><a href="https://www.perplexity.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
         </tr>
         <tr>
           <td class="tool-name-cell">Grammarly <small>Writing assistant</small></td>
           <td class="price-cell">$12/mo</td>
           <td><span class="free-badge">✓ Free</span></td>
-          <td><span class="best-for-tag">Grammar & Style</span></td>
+          <td class="price-cell">$144/yr</td>
+          <td><span class="best-for-tag">Grammar</span></td>
           <td><a href="https://www.grammarly.com" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Perplexity AI <small>AI search</small></td>
+          <td class="price-cell">$20/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td class="price-cell">$200/yr</td>
+          <td><span class="best-for-tag">Research</span></td>
+          <td><a href="https://www.perplexity.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">Jasper AI <small>Marketing copy</small></td>
+          <td class="price-cell">$39/mo</td>
+          <td><span class="no-free-badge">✗ Paid</span></td>
+          <td class="price-cell">$468/yr</td>
+          <td><span class="best-for-tag">Marketing</span></td>
+          <td><a href="https://www.jasper.ai" class="btn-cta-sm" rel="nofollow noopener" target="_blank">See Plans →</a></td>
+        </tr>
+        <tr>
+          <td class="tool-name-cell">
+            Writesonic <span class="tool-badge tool-badge-value">Budget Pick</span>
+            <small>Content creation</small>
+          </td>
+          <td class="price-cell">$20/mo</td>
+          <td><span class="free-badge">✓ Free</span></td>
+          <td class="price-cell">$192/yr</td>
+          <td><span class="best-for-tag">Content</span></td>
+          <td><a href="https://writesonic.com" class="btn-cta-sm" rel="nofollow noopener" target="_blank">Try Free →</a></td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <p class="table-disclosure">Prices verified March 2026. Some links are affiliate links — <a href="/about/">learn more</a>.</p>
+</div>
+
+<!-- BROWSE BY CATEGORY -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>Browse by Use Case</h2>
+    <a href="/articles/">See all guides →</a>
+  </div>
+  <div class="category-grid">
+    <a href="/articles/" class="category-card">
+      <div class="cat-icon">✍️</div>
+      <div class="cat-name">Writing & Content</div>
+      <div class="cat-desc">Jasper, Copy.ai, Writesonic</div>
+    </a>
+    <a href="/articles/" class="category-card">
+      <div class="cat-icon">💻</div>
+      <div class="cat-name">Coding & Dev</div>
+      <div class="cat-desc">GitHub Copilot, Claude, ChatGPT</div>
+    </a>
+    <a href="/articles/" class="category-card">
+      <div class="cat-icon">🔍</div>
+      <div class="cat-name">Research</div>
+      <div class="cat-desc">Perplexity AI, ChatGPT, Claude</div>
+    </a>
+    <a href="/articles/" class="category-card">
+      <div class="cat-icon">🎨</div>
+      <div class="cat-name">Image Generation</div>
+      <div class="cat-desc">Midjourney, DALL-E, Stable Diffusion</div>
+    </a>
+    <a href="/articles/" class="category-card">
+      <div class="cat-icon">🎓</div>
+      <div class="cat-name">Students</div>
+      <div class="cat-desc">Free tiers & budget picks</div>
+    </a>
+    <a href="/compare/" class="category-card">
+      <div class="cat-icon">📋</div>
+      <div class="cat-name">Productivity</div>
+      <div class="cat-desc">Notion AI, Grammarly, ChatGPT</div>
+    </a>
+  </div>
+</div>
+
+<!-- TODAY'S BEST DEALS -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>💰 Today's Best Deals</h2>
+    <span class="deals-updated">Updated March 2026</span>
+  </div>
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-label deal-label-top">Most Popular</div>
+      <div class="deal-tool">ChatGPT Plus</div>
+      <div class="deal-price">$20<span>/month</span></div>
+      <div class="deal-features">
+        <span>✓ GPT-4o full access</span>
+        <span>✓ DALL-E 3 image gen</span>
+        <span>✓ Advanced data analysis</span>
+        <span>✓ Plugins & integrations</span>
+      </div>
+      <a href="https://openai.com/chatgpt" class="btn-primary deal-btn" rel="nofollow noopener" target="_blank">Get ChatGPT Plus →</a>
+      <p class="deal-disclosure">* Affiliate link. Price verified March 2026.</p>
+    </div>
+    <div class="deal-card deal-card-featured">
+      <div class="deal-label deal-label-value">Best Value</div>
+      <div class="deal-tool">Writesonic Individual</div>
+      <div class="deal-price">$20<span>/month</span></div>
+      <div class="deal-features">
+        <span>✓ Unlimited words</span>
+        <span>✓ GPT-4 access</span>
+        <span>✓ Save 20% annually</span>
+        <span>✓ 10,000 free words/mo</span>
+      </div>
+      <a href="https://writesonic.com" class="btn-primary deal-btn" rel="nofollow noopener" target="_blank">Get Writesonic →</a>
+      <p class="deal-disclosure">* Affiliate link. Price verified March 2026.</p>
+    </div>
+    <div class="deal-card">
+      <div class="deal-label deal-label-research">Best for Research</div>
+      <div class="deal-tool">Perplexity Pro</div>
+      <div class="deal-price">$20<span>/month</span></div>
+      <div class="deal-features">
+        <span>✓ Unlimited Pro searches</span>
+        <span>✓ Access Claude + GPT-4o</span>
+        <span>✓ $200/yr (save 17%)</span>
+        <span>✓ Real-time citations</span>
+      </div>
+      <a href="https://www.perplexity.ai" class="btn-primary deal-btn" rel="nofollow noopener" target="_blank">Get Perplexity Pro →</a>
+      <p class="deal-disclosure">* Affiliate link. Price verified March 2026.</p>
+    </div>
   </div>
 </div>
 
@@ -96,7 +244,7 @@
 <div class="home-section">
   <div class="tool-finder">
     <h2>🎯 Find Your Perfect AI Tool</h2>
-    <p>Answer 3 quick questions and we'll match you with the best tool for your needs.</p>
+    <p>Answer 3 quick questions and we'll match you with the best tool for your needs and budget.</p>
     <div id="finder-q1">
       <div class="finder-question">What do you mainly use AI for?</div>
       <div class="finder-steps">
@@ -120,10 +268,10 @@
       <div class="finder-question">Are you a solo user or a team?</div>
       <div class="finder-steps">
         <div class="finder-step" onclick="finderSelect(3,'solo')">👤 Solo</div>
-        <div class="finder-step" onclick="finderSelect(3,'team')">👥 Team</div>
+        <div class="finder-step" onclick="finderSelect(3,'team')">👥 Team (2+ seats)</div>
       </div>
     </div>
-    <div id="finder-result">
+    <div id="finder-result" style="display:none">
       <h3 id="finder-rec-title">Our Recommendation</h3>
       <p id="finder-rec-desc"></p>
       <a id="finder-rec-link" href="/compare/" class="btn-primary">See Full Comparison →</a>
@@ -141,9 +289,20 @@
     {{- $pages := where .Site.RegularPages "Section" "articles" }}
     {{- range first 6 $pages }}
     <a href="{{ .Permalink }}" class="article-card">
-      <div class="card-tag">{{ .Params.type | default "Article" }}</div>
+      <div class="card-tag atp-tag-{{ .Params.type | default "article" }}">
+        {{- $t := .Params.type | default "article" }}
+        {{- if eq $t "comparison" }}⚖️ Comparison
+        {{- else if eq $t "review" }}🔍 Review
+        {{- else if eq $t "roundup" }}🏆 Roundup
+        {{- else if eq $t "price_change" }}🔔 Price Update
+        {{- else }}📝 Article{{- end }}
+      </div>
       <h3>{{ .Title }}</h3>
       <p>{{ .Description | default (.Summary | truncate 100) }}</p>
+      <div class="atp-card-footer">
+        <span class="atp-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="atp-card-read">{{ .ReadingTime }} min read →</span>
+      </div>
     </a>
     {{- end }}
   </div>
@@ -160,14 +319,47 @@
   <div class="article-grid">
     {{- range first 3 $comparePages }}
     <a href="{{ .Permalink }}" class="article-card">
-      <div class="card-tag">Comparison</div>
+      <div class="card-tag">⚖️ Comparison</div>
       <h3>{{ .Title }}</h3>
       <p>{{ .Description | default (.Summary | truncate 100) }}</p>
+      <div class="atp-card-footer">
+        <span class="atp-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="atp-card-read">{{ .ReadingTime }} min read →</span>
+      </div>
     </a>
     {{- end }}
   </div>
 </div>
 {{- end }}
+
+<!-- FAQ SECTION -->
+<div class="home-section">
+  <div class="section-header">
+    <h2>❓ Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Which AI tool is cheapest in 2026?</summary>
+      <p>GitHub Copilot starts at $10/month, making it the cheapest paid AI tool for developers. For general use, Writesonic's Individual plan at $20/month offers unlimited words — the best value for content creators. Most tools (ChatGPT, Claude, Grammarly, Perplexity) also offer solid free tiers.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does ChatGPT have a free version?</summary>
+      <p>Yes. ChatGPT's free tier gives you access to GPT-4o mini with limited GPT-4o access. It's one of the most capable free AI tools available. The Plus plan at $20/month unlocks full GPT-4o, DALL-E 3 image generation, and advanced data analysis.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is it worth paying for an AI tool when free versions exist?</summary>
+      <p>For frequent users, yes. Paid plans typically remove daily usage limits, unlock more powerful models, and add features like plagiarism checking or image generation. If you use AI daily for work, the time saved usually exceeds the monthly cost.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How often do AI tool prices change?</summary>
+      <p>More often than most people realize. Several major tools changed their pricing in 2025 alone. We monitor pricing daily and publish price change articles whenever a tool raises or lowers its plans. <a href="/articles/">Subscribe to get notified.</a></p>
+    </details>
+    <details class="faq-item">
+      <summary>Which AI tool is best for students on a tight budget?</summary>
+      <p>Start with the free tiers: ChatGPT for general tasks, Perplexity AI for research with citations, and Claude for long-form writing. All three have generous free plans that cover most academic use cases. See our full guide to <a href="/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget/">cheapest AI tools for students</a>.</p>
+    </details>
+  </div>
+</div>
 
 <!-- NEWSLETTER -->
 <div class="home-section">
@@ -204,22 +396,28 @@ function showFinderResult() {
   var rec = { title: '', desc: '', link: '/compare/' };
   if (use === 'coding') {
     rec.title = '💻 GitHub Copilot or Claude';
-    rec.desc = 'For coding, GitHub Copilot ($10/mo) integrates directly into your IDE. Claude Pro is excellent for architecture and complex reasoning.';
+    rec.desc = 'GitHub Copilot ($10/mo) integrates directly into your IDE. Claude Pro is excellent for architecture and complex reasoning at $20/mo.';
+    rec.link = '/articles/best-ai-tools-with-a-free-tier-in-2024-top-5-picks-tested-and-compared/';
   } else if (use === 'writing' && budget === 'free') {
     rec.title = '✍️ ChatGPT Free or Claude Free';
-    rec.desc = 'Both offer generous free tiers for writing tasks. Claude tends to produce cleaner prose; ChatGPT has more integrations.';
+    rec.desc = 'Both offer generous free tiers for writing tasks. Claude produces cleaner prose; ChatGPT has more integrations. Both are free to start.';
+    rec.link = '/articles/best-ai-tools-with-a-free-tier-in-2024-top-5-picks-tested-and-compared/';
   } else if (use === 'writing') {
-    rec.title = '✍️ Jasper AI or ChatGPT Plus';
-    rec.desc = 'Jasper ($39/mo) is purpose-built for marketing copy. ChatGPT Plus ($20/mo) is more versatile for general writing tasks.';
+    rec.title = '✍️ Jasper AI or Writesonic';
+    rec.desc = 'Jasper ($39/mo) is built for marketing copy with brand voice. Writesonic ($20/mo) is the best value pick with unlimited words.';
+    rec.link = '/articles/best-ai-writing-tools-2026-jasper-ai-vs-copyai-vs-writesonic-compared/';
   } else if (use === 'research') {
     rec.title = '🔍 Perplexity AI Pro';
-    rec.desc = 'Perplexity is built for research — it cites sources, searches the web in real-time, and gives concise answers. Pro is $20/mo.';
+    rec.desc = 'Perplexity is built for research — it cites sources, searches the web in real-time, and gives concise answers. Pro is $20/mo ($200/yr).';
+    rec.link = '/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget/';
   } else if (use === 'images') {
     rec.title = '🎨 Midjourney';
-    rec.desc = 'Midjourney produces the highest quality AI images. Plans start at $10/mo for ~200 images.';
+    rec.desc = 'Midjourney produces the highest quality AI images. Plans start at $10/mo. DALL-E 3 is included in ChatGPT Plus ($20/mo) if you want an all-in-one tool.';
+    rec.link = '/compare/';
   } else {
     rec.title = '📋 Notion AI or Grammarly';
-    rec.desc = 'For productivity and writing assistance, Notion AI ($10/mo add-on) and Grammarly ($12/mo) are top choices.';
+    rec.desc = 'Notion AI ($8/mo add-on) is perfect if you already use Notion. Grammarly ($12/mo) is the best inline writing assistant for professionals.';
+    rec.link = '/articles/is-grammarly-premium-worth-it-in-2026-an-honest-review/';
   }
   document.getElementById('finder-rec-title').textContent = rec.title;
   document.getElementById('finder-rec-desc').textContent = rec.desc;

@@ -2,6 +2,15 @@
 
 <article class="atp-article">
 
+  <!-- Breadcrumb -->
+  <nav class="atp-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span>›</span>
+    <a href="/{{ .Section }}/">{{ .Section | title }}</a>
+    <span>›</span>
+    <span>{{ .Title | truncate 50 }}</span>
+  </nav>
+
   <!-- Article Hero Header -->
   <header class="atp-article-header">
     {{- $type := .Params.type | default "article" }}
@@ -22,6 +31,11 @@
     {{- end }}
   </header>
 
+  <!-- Affiliate Disclosure Banner -->
+  <div class="atp-disclosure-banner">
+    <strong>Disclosure:</strong> Some links in this article are affiliate links. If you click and make a purchase, we may earn a small commission at no extra cost to you. This does not affect our reviews or rankings. <a href="/about/">Learn more</a>.
+  </div>
+
   <!-- Article Body: TOC sidebar + Content -->
   <div class="atp-article-body">
 
@@ -32,6 +46,14 @@
         <div class="atp-toc-title">📋 On This Page</div>
         {{- partial "toc.html" . }}
       </div>
+      <!-- Sidebar Affiliate Ad -->
+      <div class="atp-sidebar-deal">
+        <div class="atp-sidebar-deal-label">Today's Best Deal</div>
+        <div class="atp-sidebar-deal-tool">ChatGPT Plus</div>
+        <div class="atp-sidebar-deal-price">$20<span>/month</span></div>
+        <a href="https://openai.com/chatgpt" class="btn-primary" style="width:100%;text-align:center;margin-top:10px;font-size:0.85rem;padding:10px 16px;" rel="nofollow noopener" target="_blank">Try ChatGPT Plus →</a>
+        <p style="font-size:0.68rem;color:var(--text-muted);margin-top:6px;text-align:center;">* Affiliate link</p>
+      </div>
     </aside>
     {{- end }}
 
@@ -41,12 +63,23 @@
       {{- partial "anchored_headings.html" .Content -}}
       {{- else }}{{ .Content }}{{ end }}
 
+      <!-- Mid-Article Affiliate CTA -->
+      <div class="atp-mid-cta">
+        <div class="atp-mid-cta-inner">
+          <div class="atp-mid-cta-text">
+            <strong>Looking for the best AI tool price?</strong>
+            <span>Compare all plans side by side — free tiers, annual discounts, and what's actually worth it.</span>
+          </div>
+          <a href="/compare/" class="btn-primary">Compare Prices →</a>
+        </div>
+      </div>
+
       <!-- Bottom CTA -->
       <div class="atp-bottom-cta">
         <div class="atp-bottom-cta-inner">
           <div>
-            <strong>Get price alerts for free</strong>
-            <p>We'll notify you when any AI tool changes its pricing.</p>
+            <strong>Get price alerts — free</strong>
+            <p>We'll notify you when any AI tool changes its pricing. No spam.</p>
           </div>
           <a href="/#newsletter-form" class="btn-primary">Get Alerts →</a>
         </div>
@@ -55,7 +88,6 @@
   </div>
 
   <!-- Related Articles -->
-  {{- $currentPage := . }}
   {{- $section := .Section }}
   {{- $related := where site.RegularPages "Section" $section | first 4 }}
   {{- $related = where $related "Permalink" "ne" .Permalink }}
@@ -63,6 +95,7 @@
   <section class="atp-related">
     <div class="section-header">
       <h2>Related Articles</h2>
+      <a href="/{{ $section }}/">See all →</a>
     </div>
     <div class="article-grid">
       {{- range first 3 $related }}

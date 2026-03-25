@@ -1,3 +1,136 @@
 <meta name="Impact-Site-Verification" content="8e0579b0-c364-4f2c-a840-a89ae5cf6f7b">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4033090815890643"
      crossorigin="anonymous"></script>
+
+{{- /* Open Graph / Social meta tags */}}
+<meta property="og:site_name" content="AI Tool Price">
+<meta property="og:locale" content="en_US">
+{{- if .IsPage }}
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ .Title }} — AI Tool Price">
+<meta property="og:description" content="{{ .Description | default .Summary }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description | default .Summary }}">
+
+{{- /* JSON-LD: Article schema */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ (.Description | default .Summary) | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Price Editorial Team",
+    "url": "https://aitoolprice.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Price",
+    "url": "https://aitoolprice.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://aitoolprice.com/logo.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+}
+</script>
+
+{{- /* JSON-LD: BreadcrumbList */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aitoolprice.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Section | title | jsonify }},
+      "item": {{ (print "https://aitoolprice.com/" .Section "/") | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+
+{{- else if .IsHome }}
+{{- /* JSON-LD: WebSite + SearchAction on homepage */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Tool Price",
+  "url": "https://aitoolprice.com",
+  "description": "Compare AI tool pricing side by side. Track ChatGPT, Claude, Jasper, Grammarly and more — updated daily.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Price",
+    "url": "https://aitoolprice.com"
+  }
+}
+</script>
+
+{{- /* JSON-LD: FAQPage on homepage */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which AI tool is cheapest in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub Copilot starts at $10/month, making it the cheapest paid AI tool for developers. Writesonic's Individual plan at $20/month offers unlimited words — the best value for content creators. ChatGPT, Claude, Grammarly, and Perplexity all offer solid free tiers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ChatGPT have a free version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ChatGPT's free tier gives access to GPT-4o mini with limited GPT-4o access. The Plus plan at $20/month unlocks full GPT-4o, DALL-E 3 image generation, and advanced data analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it worth paying for an AI tool when free versions exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For frequent users, yes. Paid plans remove daily usage limits, unlock more powerful models, and add features like plagiarism checking or image generation. If you use AI daily for work, the time saved usually exceeds the monthly cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI tool is best for students on a tight budget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with free tiers: ChatGPT for general tasks, Perplexity AI for research with citations, and Claude for long-form writing. All three have generous free plans covering most academic use cases."
+      }
+    }
+  ]
+}
+</script>
+{{- end }}
