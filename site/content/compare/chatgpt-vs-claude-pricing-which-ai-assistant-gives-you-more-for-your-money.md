@@ -1,17 +1,17 @@
 ---
 title: "ChatGPT vs Claude Pricing (2026): Which AI Assistant Gives You More for Your Money?"
-date: 2026-03-20
-lastmod: 2026-03-25
-slug: "chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money"
 description: "ChatGPT vs Claude pricing compared: free tiers, paid plans, and which AI assistant is worth it in 2026. Updated March 2026."
-type: "comparison"
-keywords: ["ChatGPT vs Claude pricing", "ChatGPT vs Claude 2026", "Claude Pro vs ChatGPT Plus"]
+lastmod: 2026-03-25
 author: "AI Tool Price Editorial Team"
 canonicalURL: "https://aitoolprice.com/compare/chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money/"
 ShowToc: true
 TocOpen: false
 ShowReadingTime: true
 ShowShareButtons: true
+date: 2026-03-20
+slug: "chatgpt-vs-claude-pricing-which-ai-assistant-gives-you-more-for-your-money"
+type: "comparison"
+keywords: ["ChatGPT vs Claude pricing", "ChatGPT vs Claude 2026", "Claude Pro vs ChatGPT Plus"]
 draft: false
 ---
 

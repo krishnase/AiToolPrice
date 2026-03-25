@@ -1,17 +1,17 @@
 ---
 title: "Is Grammarly Premium Worth It in 2026? An Honest Review"
-date: 2026-03-20
-lastmod: 2026-03-25
-slug: "is-grammarly-premium-worth-it-in-2026-an-honest-review"
 description: "Is Grammarly Premium worth it in 2026? We break down the pricing, real features, and who should actually upgrade — and who should not. Updated March 2026."
-type: "review"
-keywords: ["Grammarly Premium worth it 2026", "Grammarly Premium review", "Grammarly pricing 2026"]
+lastmod: 2026-03-25
 author: "AI Tool Price Editorial Team"
 canonicalURL: "https://aitoolprice.com/articles/is-grammarly-premium-worth-it-in-2026-an-honest-review/"
 ShowToc: true
 TocOpen: false
 ShowReadingTime: true
 ShowShareButtons: true
+date: 2026-03-20
+slug: "is-grammarly-premium-worth-it-in-2026-an-honest-review"
+type: "review"
+keywords: ["Grammarly Premium worth it 2026", "Grammarly Premium review", "Grammarly pricing 2026"]
 draft: false
 ---
 

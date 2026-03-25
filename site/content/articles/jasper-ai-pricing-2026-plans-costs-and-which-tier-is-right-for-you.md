@@ -1,9 +1,15 @@
 ---
 title: "Jasper AI Pricing 2026: Plans, Costs, and Which Tier Is Right for You"
+description: "Jasper AI Pricing 2026: Plans, Costs, and Which Tier Is Right for You — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/jasper-ai-pricing-2026-plans-costs-and-which-tier-is-right-for-you/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-20
-lastmod: 2026-03-20
 slug: "jasper-ai-pricing-2026-plans-costs-and-which-tier-is-right-for-you"
-description: "Compare Jasper AI pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Jasper AI pricing 2026"]
 draft: false

@@ -1,9 +1,15 @@
 ---
 title: "Copy.ai Pricing Review 2026: Is It Worth the Cost?"
+description: "Copy.ai Pricing Review 2026: Is It Worth the Cost? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/copyai-pricing-review-2026-is-it-worth-the-cost/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "copyai-pricing-review-2026-is-it-worth-the-cost"
-description: "Compare Copy.ai pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Copy.ai pricing review 2026"]
 draft: false

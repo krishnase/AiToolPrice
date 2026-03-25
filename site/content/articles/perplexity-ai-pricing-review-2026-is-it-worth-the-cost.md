@@ -1,9 +1,15 @@
 ---
 title: "Perplexity AI Pricing Review 2026: Is It Worth the Cost?"
+description: "Perplexity AI Pricing Review 2026: Is It Worth the Cost? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/perplexity-ai-pricing-review-2026-is-it-worth-the-cost/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-23
-lastmod: 2026-03-23
 slug: "perplexity-ai-pricing-review-2026-is-it-worth-the-cost"
-description: "Compare Perplexity AI pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Perplexity AI pricing review 2026"]
 draft: false

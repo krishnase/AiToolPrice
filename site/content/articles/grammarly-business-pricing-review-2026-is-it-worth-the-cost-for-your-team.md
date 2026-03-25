@@ -1,9 +1,15 @@
 ---
 title: "Grammarly Business Pricing Review 2026: Is It Worth the Cost for Your Team?"
+description: "Grammarly Business Pricing Review 2026: Is It Worth the Cost for Your Team? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/grammarly-business-pricing-review-2026-is-it-worth-the-cost-for-your-team/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "grammarly-business-pricing-review-2026-is-it-worth-the-cost-for-your-team"
-description: "Compare Grammarly pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Grammarly Business pricing review 2026"]
 draft: false

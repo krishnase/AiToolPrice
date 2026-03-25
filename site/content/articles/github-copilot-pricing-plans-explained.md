@@ -1,9 +1,15 @@
 ---
 title: "GitHub Copilot Pricing Plans Explained"
+description: "GitHub Copilot Pricing Plans Explained — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/github-copilot-pricing-plans-explained/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "github-copilot-pricing-plans-explained"
-description: "Compare Midjourney pricing and features. Updated March 2026."
 type: "review"
 keywords: ["GitHub Copilot pricing plans explained"]
 draft: false

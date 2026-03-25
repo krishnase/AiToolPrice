@@ -1,9 +1,15 @@
 ---
 title: "Notion AI vs Grammarly for Writing: Which Tool Is Right for You?"
+description: "Notion AI vs Grammarly for Writing: Which Tool Is Right for You? — side-by-side pricing, features, and which is worth it in 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/notion-ai-vs-grammarly-for-writing-which-tool-is-right-for-you/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-23
-lastmod: 2026-03-23
 slug: "notion-ai-vs-grammarly-for-writing-which-tool-is-right-for-you"
-description: "Compare Notion AI, Grammarly pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Notion AI vs Grammarly for writing"]
 draft: false

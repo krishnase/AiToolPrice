@@ -1,9 +1,15 @@
 ---
 title: "Best AI Coding Assistants in 2026: ChatGPT vs Claude vs GitHub Copilot"
-date: 2026-03-25
+description: "Best AI Coding Assistants in 2026: ChatGPT vs Claude vs GitHub Copilot — pricing compared, free tiers highlighted, and top picks for 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/best-ai-coding-assistants-in-2026-chatgpt-vs-claude-vs-github-copilot/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "best-ai-coding-assistants-in-2026-chatgpt-vs-claude-vs-github-copilot"
-description: "Compare ChatGPT, Claude, GitHub Copilot pricing and features. Updated March 2026."
 type: "roundup"
 keywords: ["best AI coding assistants 2026"]
 draft: false

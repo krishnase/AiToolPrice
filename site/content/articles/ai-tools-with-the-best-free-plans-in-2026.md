@@ -1,9 +1,15 @@
 ---
 title: "AI Tools With the Best Free Plans in 2026"
-date: 2026-03-25
+description: "AI Tools With the Best Free Plans in 2026 — pricing compared, free tiers highlighted, and top picks for 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/ai-tools-with-the-best-free-plans-in-2026/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "ai-tools-with-the-best-free-plans-in-2026"
-description: "Compare ChatGPT, Claude, Copy.ai pricing and features. Updated March 2026."
 type: "roundup"
 keywords: ["AI tools with best free plans 2026"]
 draft: false

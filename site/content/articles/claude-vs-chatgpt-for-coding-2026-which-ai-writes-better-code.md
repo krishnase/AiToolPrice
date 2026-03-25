@@ -1,9 +1,15 @@
 ---
 title: "Claude vs ChatGPT for Coding 2026: Which AI Writes Better Code?"
-date: 2026-03-25
+description: "Claude vs ChatGPT for Coding 2026: Which AI Writes Better Code? — side-by-side pricing, features, and which is worth it in 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/claude-vs-chatgpt-for-coding-2026-which-ai-writes-better-code/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "claude-vs-chatgpt-for-coding-2026-which-ai-writes-better-code"
-description: "Compare ChatGPT, Claude pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Claude vs ChatGPT for coding 2026"]
 draft: false

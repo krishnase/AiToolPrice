@@ -1,17 +1,17 @@
 ---
 title: "Cheapest AI Tools for Students in 2026: Top Picks for Every Budget"
-date: 2026-03-20
-lastmod: 2026-03-25
-slug: "cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget"
 description: "The cheapest AI tools for students in 2026 — free tiers, student discounts, and affordable paid plans for every budget. Updated March 2026."
-type: "roundup"
-keywords: ["cheapest AI tools for students", "free AI tools students 2026", "best AI for students"]
+lastmod: 2026-03-25
 author: "AI Tool Price Editorial Team"
 canonicalURL: "https://aitoolprice.com/articles/cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget/"
 ShowToc: true
 TocOpen: false
 ShowReadingTime: true
 ShowShareButtons: true
+date: 2026-03-20
+slug: "cheapest-ai-tools-for-students-in-2024-top-picks-for-every-budget"
+type: "roundup"
+keywords: ["cheapest AI tools for students", "free AI tools students 2026", "best AI for students"]
 draft: false
 ---
 

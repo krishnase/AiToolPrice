@@ -1,9 +1,15 @@
 ---
 title: "Jasper AI vs Copy.ai 2026: Which AI Writing Tool Is Right for You?"
-date: 2026-03-25
+description: "Jasper AI vs Copy.ai 2026: Which AI Writing Tool Is Right for You? — side-by-side pricing, features, and which is worth it in 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/jasper-ai-vs-copyai-2026-which-ai-writing-tool-is-right-for-you/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "jasper-ai-vs-copyai-2026-which-ai-writing-tool-is-right-for-you"
-description: "Compare Jasper AI, Copy.ai pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Jasper AI vs Copy.ai 2026"]
 draft: false

@@ -1,9 +1,15 @@
 ---
 title: "Midjourney vs Alternatives Pricing 2026: GitHub Copilot vs Perplexity AI Compared"
+description: "Midjourney vs Alternatives Pricing 2026: GitHub Copilot vs Perplexity AI Compared — side-by-side pricing, features, and which is worth it in 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/midjourney-vs-alternatives-pricing-2026-github-copilot-vs-perplexity-ai-compared/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "midjourney-vs-alternatives-pricing-2026-github-copilot-vs-perplexity-ai-compared"
-description: "Compare GitHub Copilot, Perplexity AI pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Midjourney vs alternatives pricing 2026"]
 draft: false

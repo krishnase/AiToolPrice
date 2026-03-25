@@ -1,9 +1,15 @@
 ---
 title: "Perplexity AI Pro Review 2026: Is the $20/Month Upgrade Worth It?"
+description: "Perplexity AI Pro Review 2026: Is the $20/Month Upgrade Worth It? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/perplexity-ai-pro-review-2026-is-the-20month-upgrade-worth-it/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "perplexity-ai-pro-review-2026-is-the-20month-upgrade-worth-it"
-description: "Compare Perplexity AI pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Perplexity AI Pro review 2026"]
 draft: false

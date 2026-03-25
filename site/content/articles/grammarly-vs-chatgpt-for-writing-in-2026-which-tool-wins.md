@@ -1,9 +1,15 @@
 ---
 title: "Grammarly vs ChatGPT for Writing in 2026: Which Tool Wins?"
+description: "Grammarly vs ChatGPT for Writing in 2026: Which Tool Wins? — side-by-side pricing, features, and which is worth it in 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/grammarly-vs-chatgpt-for-writing-in-2026-which-tool-wins/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "grammarly-vs-chatgpt-for-writing-in-2026-which-tool-wins"
-description: "Compare ChatGPT, Grammarly pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Grammarly vs ChatGPT for writing 2026"]
 draft: false

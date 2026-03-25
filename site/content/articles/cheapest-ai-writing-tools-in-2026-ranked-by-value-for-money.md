@@ -1,9 +1,15 @@
 ---
 title: "Cheapest AI Writing Tools in 2026: Ranked by Value for Money"
-date: 2026-03-25
+description: "Cheapest AI Writing Tools in 2026: Ranked by Value for Money — pricing compared, free tiers highlighted, and top picks for 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/cheapest-ai-writing-tools-in-2026-ranked-by-value-for-money/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "cheapest-ai-writing-tools-in-2026-ranked-by-value-for-money"
-description: "Compare Jasper AI, Copy.ai, Writesonic pricing and features. Updated March 2026."
 type: "roundup"
 keywords: ["cheapest AI writing tools 2026"]
 draft: false

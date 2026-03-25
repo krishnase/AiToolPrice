@@ -1,3 +1,7 @@
 .env
 .vercel
 .env*.local
+.DS_Store
+fix_articles.py
+site/public/
+pipeline.log

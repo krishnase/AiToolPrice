@@ -1,9 +1,15 @@
 ---
 title: "Best AI Tools for Students in 2026: The Ultimate Roundup"
-date: 2026-03-25
+description: "Best AI Tools for Students in 2026: The Ultimate Roundup — pricing compared, free tiers highlighted, and top picks for 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/best-ai-tools-for-students-in-2026-the-ultimate-roundup/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "best-ai-tools-for-students-in-2026-the-ultimate-roundup"
-description: "Compare ChatGPT, Claude, Perplexity AI pricing and features. Updated March 2026."
 type: "roundup"
 keywords: ["best AI tools for students 2026"]
 draft: false

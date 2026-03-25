@@ -1,9 +1,15 @@
 ---
 title: "Notion AI Pricing in 2026: Is It Actually Worth It?"
+description: "Notion AI Pricing in 2026: Is It Actually Worth It? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/notion-ai-pricing-in-2026-is-it-actually-worth-it/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "notion-ai-pricing-in-2026-is-it-actually-worth-it"
-description: "Compare Notion AI pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Notion AI pricing is it worth it 2026"]
 draft: false

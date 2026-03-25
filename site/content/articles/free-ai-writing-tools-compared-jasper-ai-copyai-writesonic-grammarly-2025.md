@@ -1,9 +1,15 @@
 ---
-title: "Free AI Writing Tools Compared: Jasper AI, Copy.ai, Writesonic & Grammarly (2025)"
+title: "Free AI Writing Tools Compared: Jasper AI, Copy.ai, Writesonic & Grammarly (2026)"
+description: "Free AI Writing Tools Compared: Jasper AI, Copy.ai, Writesonic & Grammarly (2026) — pricing compared, free tiers highlighted, and top picks for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/free-ai-writing-tools-compared-jasper-ai-copyai-writesonic-grammarly-2025/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "free-ai-writing-tools-compared-jasper-ai-copyai-writesonic-grammarly-2025"
-description: "Compare Jasper AI, Copy.ai, Writesonic pricing and features. Updated March 2026."
 type: "roundup"
 keywords: ["free AI writing tools compared"]
 draft: false

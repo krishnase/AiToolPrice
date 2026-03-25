@@ -1,9 +1,15 @@
 ---
 title: "Midjourney Pricing Plans Explained 2026: Which Tier Is Right for You?"
+description: "Midjourney Pricing Plans Explained 2026: Which Tier Is Right for You? — honest pricing breakdown, pros, cons, and verdict for 2026."
+lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/midjourney-pricing-plans-explained-2026-which-tier-is-right-for-you/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
 date: 2026-03-24
-lastmod: 2026-03-24
 slug: "midjourney-pricing-plans-explained-2026-which-tier-is-right-for-you"
-description: "Compare Midjourney pricing and features. Updated March 2026."
 type: "review"
 keywords: ["Midjourney pricing plans explained 2026"]
 draft: false

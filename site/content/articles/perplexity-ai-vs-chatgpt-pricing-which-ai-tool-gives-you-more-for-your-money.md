@@ -1,9 +1,15 @@
 ---
 title: "Perplexity AI vs ChatGPT Pricing: Which AI Tool Gives You More for Your Money?"
-date: 2026-03-25
+description: "Perplexity AI vs ChatGPT Pricing: Which AI Tool Gives You More for Your Money? — side-by-side pricing, features, and which is worth it in 2026."
 lastmod: 2026-03-25
+author: "AI Tool Price Editorial Team"
+canonicalURL: "https://aitoolprice.com/articles/perplexity-ai-vs-chatgpt-pricing-which-ai-tool-gives-you-more-for-your-money/"
+ShowToc: true
+TocOpen: false
+ShowReadingTime: true
+ShowShareButtons: true
+date: 2026-03-25
 slug: "perplexity-ai-vs-chatgpt-pricing-which-ai-tool-gives-you-more-for-your-money"
-description: "Compare ChatGPT, Perplexity AI pricing and features. Updated March 2026."
 type: "comparison"
 keywords: ["Perplexity AI vs ChatGPT pricing"]
 draft: false
